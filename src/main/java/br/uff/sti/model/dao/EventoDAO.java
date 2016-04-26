@@ -6,6 +6,8 @@
 package br.uff.sti.model.dao;
 
 import br.uff.sti.model.domain.Evento;
+import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -13,5 +15,9 @@ import org.springframework.data.repository.CrudRepository;
  * @author uff
  */
 public interface EventoDAO extends CrudRepository<Evento,Long>{
-    
+    @Query("SELECT ev FROM Evento ev "
+            + " INNER JOIN FETCH atu.aluno al "
+            + " INNER JOIN FETCH atu.turma t "
+            + " WHERE t.codigo = ?1")
+    public  List<Evento> findByCodigoDoCurso(String codigo);
 }

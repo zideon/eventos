@@ -22,12 +22,13 @@ public class TipoEventoServiceBean implements TipoEventoService{
     private TipoEventoDAO tipoEventoDAO;
     @Override
     public TipoEvento salva(TipoEvento obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        tipoEventoDAO.save(obj);
+        return obj;
     }
 
     @Override
     public TipoEvento busca(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return  tipoEventoDAO.findOne(Long.parseLong(id));
     }
 
     @Override
@@ -36,13 +37,8 @@ public class TipoEventoServiceBean implements TipoEventoService{
     }
 
     @Override
-    public TipoEvento cria(Object... objs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public Iterable<TipoEvento> todos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return tipoEventoDAO.findAll();
     }
     
 }

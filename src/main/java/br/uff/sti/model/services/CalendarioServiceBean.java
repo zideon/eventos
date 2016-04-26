@@ -37,12 +37,6 @@ public class CalendarioServiceBean implements CalendarioService{
     }
 
     @Override
-    public Calendario cria(Object... objs) {
-           Calendario calendario = new Calendario().addAnoSemestre((String) objs[0]);
-           return calendario;
-    }
-
-    @Override
     public Iterable<Calendario> todos() {
         return calendarioDAO.findAll();
     }

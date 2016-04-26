@@ -38,16 +38,8 @@ public class CursoServiceBean implements CursoService{
     }
 
     @Override
-    public Curso cria(Object... objs) {
-     Curso curso = new Curso()
-             .addCodigo((String)objs[0])
-             .addNome((String)objs[1]);
-     return curso;
-    }
-
-    @Override
     public Iterable<Curso> todos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return cursoDAO.findAll();
     }
     
 }

@@ -19,6 +19,5 @@ public interface DAOService<I> {
     public I salva(I obj);
     public I busca(String id);
     public List<I> buscaPorAtributos(I modelo);
-    public I cria(Object ... objs);
     public Iterable<I> todos();
 }

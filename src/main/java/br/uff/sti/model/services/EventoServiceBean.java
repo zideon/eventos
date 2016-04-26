@@ -22,12 +22,13 @@ public class EventoServiceBean implements EventoService{
     
     @Override
     public Evento salva(Evento obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        eventoDAO.save(obj);
+        return obj;
     }
 
     @Override
     public Evento busca(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return eventoDAO.findOne(Long.parseLong(id));
     }
 
     @Override
@@ -35,14 +36,10 @@ public class EventoServiceBean implements EventoService{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public Evento cria(Object... objs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
     @Override
     public Iterable<Evento> todos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return eventoDAO.findAll();       
     }
     
 }

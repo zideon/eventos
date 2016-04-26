@@ -10,6 +10,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
@@ -35,10 +36,16 @@ public class Evento implements Serializable {
     private String grupo;
     
     @ManyToOne
+    @JoinColumn(name = "cod_turma",nullable = false)
     private Calendario calendario;
     
     @ManyToOne
+    @JoinColumn(name = "cod_turma",nullable = false)
     private TipoEvento tipo;
+    
+    @ManyToOne
+    @JoinColumn(name = "cod_turma",nullable = false)
+    private Curso curso;
     
     public Evento(){}
     public Evento addGrupo(String grupo){
@@ -49,12 +56,20 @@ public class Evento implements Serializable {
         this.calendario = calendario;
         return this;
     }
+    public Evento addTipo(TipoEvento tipo){
+        this.tipo = tipo;
+        return this;
+    }
     public Evento addDataInicio(Date dataInicio){
         this.dataInicio = dataInicio;
         return this;
     }
     public Evento addDataFim(Date dataFim){
         this.dataFim = dataFim;
+        return this;
+    }
+    public Evento addCurso(Curso curso){
+        this.curso = curso;
         return this;
     }
     public Long getID() {
@@ -83,5 +98,9 @@ public class Evento implements Serializable {
     public TipoEvento getTipo() {
         return tipo;
     }   
+
+    public Curso getCurso() {
+        return curso;
+    }
     
 }
