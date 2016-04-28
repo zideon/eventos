@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: br.uff.sti.EventosApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.554 sec - in br.uff.sti.EventosApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.366 sec - in br.uff.sti.EventosApplicationTests

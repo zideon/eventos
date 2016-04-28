@@ -17,8 +17,6 @@ import javax.persistence.*;
 public class Calendario implements Serializable {
 
     @Id
-    @GeneratedValue
-    private Long ID;
     private String anoSemestre;
 
     public Calendario(){}
@@ -26,9 +24,6 @@ public class Calendario implements Serializable {
     public Calendario addAnoSemestre(String anoSemestre){
         this.anoSemestre = anoSemestre;
         return this;
-    }
-    public Long getID() {
-        return ID;
     }
 
     public String getAnoSemestre() {

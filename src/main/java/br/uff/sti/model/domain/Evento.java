@@ -12,7 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -35,16 +34,16 @@ public class Evento implements Serializable {
     
     private String grupo;
     
+    @JoinColumn(name = "cod_calendar")
     @ManyToOne
-    @JoinColumn(name = "cod_turma",nullable = false)
     private Calendario calendario;
     
+    @JoinColumn(name = "tipo")
     @ManyToOne
-    @JoinColumn(name = "cod_turma",nullable = false)
     private TipoEvento tipo;
     
     @ManyToOne
-    @JoinColumn(name = "cod_turma",nullable = false)
+    @JoinColumn(name = "cod_curso")
     private Curso curso;
     
     public Evento(){}

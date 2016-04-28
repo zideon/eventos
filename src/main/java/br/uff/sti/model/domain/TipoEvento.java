@@ -16,10 +16,11 @@ import javax.persistence.Id;
  */
 @Entity
 public class TipoEvento implements Serializable {
-
+    public static final String INSCRICAO ="INS";
+    
+    
     @Id
-    @GeneratedValue
-    private Long ID;
+    private String codigo;
     
     private String nome;
     
@@ -36,13 +37,11 @@ public class TipoEvento implements Serializable {
         return this;
     }
 
-    public Long getID() {
-        return ID;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
+ 
 
     public String getNome() {
         return nome;

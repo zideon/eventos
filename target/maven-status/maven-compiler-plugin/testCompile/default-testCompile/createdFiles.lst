@@ -1,1 +1,5 @@
 br/uff/sti/EventosApplicationTests.class
+br/uff/sti/model/services/CursoServiceBeanTest.class
+br/uff/sti/model/services/CalendarioServiceBeanTest.class
+br/uff/sti/model/services/EventoServiceBeanTest.class
+br/uff/sti/model/services/TipoEventoServiceBeanTest.class

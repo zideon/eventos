@@ -16,9 +16,8 @@ import javax.persistence.Id;
  */
 @Entity
 public class Curso implements Serializable {
-
+    public static final String MEDICINA ="MED";
     @Id
-    @GeneratedValue
     private String codigo;
 
     private String nome;
