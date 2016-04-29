@@ -1,16 +1,9 @@
-br/uff/sti/model/dao/CalendarioDAO.class
 br/uff/sti/model/services/ConsultasService.class
 br/uff/sti/model/domain/TipoEvento.class
-br/uff/sti/model/services/dao/CalendarioDAOService.class
-br/uff/sti/model/dao/TipoEventoDAO.class
-br/uff/sti/model/services/dao/TipoEventoDAOService.class
+.netbeans_automatic_build
 br/uff/sti/model/dao/EventoDAO.class
 br/uff/sti/model/domain/Evento.class
-br/uff/sti/model/dao/CursoDAO.class
 br/uff/sti/control/EventoController.class
-br/uff/sti/model/services/dao/DAOService.class
 br/uff/sti/EventosApplication.class
-br/uff/sti/model/services/dao/CursoDAOService.class
 br/uff/sti/model/domain/Curso.class
-br/uff/sti/model/services/dao/EventoDAOService.class
 br/uff/sti/model/domain/Calendario.class

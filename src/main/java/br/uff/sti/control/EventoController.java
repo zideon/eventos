@@ -5,23 +5,28 @@
  */
 package br.uff.sti.control;
 
+import br.uff.sti.model.domain.Evento;
+import br.uff.sti.model.services.ConsultasService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author uff
  */
-@Controller
+@RestController
 @RequestMapping(value = "/evento")
 public class EventoController {
+    @Autowired
+    ConsultasService consultas;
     
-    @RequestMapping(value = "medicina2016", method = RequestMethod.GET)
-    String mediciana2016(Model model) {
-       model.addAttribute("alunos", null);
-       model.addAttribute("view", "fragments/exibeAlunosContent");
-       return "index";
+    @RequestMapping(value = "semana", method = RequestMethod.GET)
+    List<Evento> mediciana2016() {
+       return consultas.periodoInscricao2016SQL();
     }
 }

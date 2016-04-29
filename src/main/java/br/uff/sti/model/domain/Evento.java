@@ -101,5 +101,12 @@ public class Evento implements Serializable {
     public Curso getCurso() {
         return curso;
     }
-    
+    @Override
+    public String toString() { 
+        return "grupo: "+this.grupo + " inicio: "+this.dataInicio
+                +" fim: "+this.dataFim + " tipo: "+this.tipo.getNome()
+                + " curso: "+ this.curso.getNome() 
+                +" referente ao calendarios: "+this.calendario.getAnoSemestre(); 
+    }
+
 }
